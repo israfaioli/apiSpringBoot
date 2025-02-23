@@ -7,7 +7,6 @@ import med.voll.api.enums.Especialidade;
 import med.voll.api.jpa.Endereco;
 import med.voll.api.jpa.Medico;
 import med.voll.api.repository.MedicoRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,6 @@ import org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.json.JacksonTester;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
@@ -80,8 +78,8 @@ class MedicoControllerTest {
                 null,
                 dadosCadastro.nome(),
                 dadosCadastro.email(),
-                dadosCadastro.crm(),
                 dadosCadastro.telefone(),
+                dadosCadastro.crm(),
                 dadosCadastro.especialidade(),
                 new Endereco(dadosCadastro.dadosEndereco())
         );
